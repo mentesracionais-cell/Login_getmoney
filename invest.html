@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GetMoney+ - Marketplace de Mineiros">
+    <meta name="theme-color" content="#FFC107">
+    <title>GetMoney+ | Mercado de Mineiros</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/invest.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="app-header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <h1 class="auth-logo">Get<span>Money+</span></h1>
+                <div class="user-avatar">
+                    <span id="user-initial">?</span>
+                </div>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <section class="container mt-lg mb-xl">
+                <h1 class="text-center mb-md">Mercado de Mineiros</h1>
+                <p class="text-center mb-lg" style="color: var(--text-light);">Escolha o melhor plano para você e comece a minerar.</p>
+                
+                <div class="investment-list" id="investment-list">
+                    <div class="investment-grid">
+                        <div class="card fade-in" data-vip="VIP1">
+                            <div class="vip-icon">VIP1</div>
+                            <div class="vip-name">Ouro</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">450 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">2000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">21500 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP1', 2000)">Investir</button>
+                        </div>
+                        <div class="card fade-in" data-vip="VIP2">
+                            <div class="vip-icon">VIP2</div>
+                            <div class="vip-name">Platina</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">1000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">6000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">60000 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP2', 6000)">Investir</button>
+                        </div>
+                        <div class="card fade-in" data-vip="VIP3">
+                            <div class="vip-icon">VIP3</div>
+                            <div class="vip-name">Titânio</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">1333 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">8000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">80700 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP3', 8000)">Investir</button>
+                        </div>
+                        <div class="card fade-in" data-vip="VIP4">
+                            <div class="vip-icon">VIP4</div>
+                            <div class="vip-name">Diamante</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">2000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">10000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">100000 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP4', 10000)">Investir</button>
+                        </div>
+                        <div class="card fade-in" data-vip="VIP5">
+                            <div class="vip-icon">VIP5</div>
+                            <div class="vip-name">Bronze Corporativo</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">4000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">20000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">200000 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP5', 20000)">Investir</button>
+                        </div>
+                        <div class="card fade-in" data-vip="VIP6">
+                            <div class="vip-icon">VIP6</div>
+                            <div class="vip-name">Prata Corporativa</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">8000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">40000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">400000 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP6', 40000)">Investir</button>
+                        </div>
+                        <div class="card fade-in" data-vip="VIP3">
+                            <div class="vip-icon">VIP3</div>
+                            <div class="vip-name">Titânio</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">1333 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">8000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">80700 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP3', 8000)">Investir</button>
+                        </div>
+                        <div class="card fade-in" data-vip="VIP4">
+                            <div class="vip-icon">VIP4</div>
+                            <div class="vip-name">Diamante</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">2000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">10000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">100000 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP4', 10000)">Investir</button>
+                        </div>
+                        <div class="card fade-in" data-vip="VIP1">
+                            <div class="vip-icon">VIP1</div>
+                            <div class="vip-name">Ouro</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">450 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">2000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">21500 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP1', 2000)">Investir</button>
+                        </div>
+
+                        <div class="card fade-in" data-vip="VIP7">
+                            <div class="vip-icon">VIP7</div>
+                            <div class="vip-name">Ouro Corporativo</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">16000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">80000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">800000 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP7', 80000)">Investir</button>
+                        </div>
+                        <div class="card fade-in" data-vip="VIP8">
+                            <div class="vip-icon">VIP8</div>
+                            <div class="vip-name">Platina Corporativa</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">32000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">160000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">1600000 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP8', 160000)">Investir</button>
+                        </div>
+                        <div class="card fade-in" data-vip="VIP9">
+                            <div class="vip-icon">VIP9</div>
+                            <div class="vip-name">Diamante Corporativo</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">64000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">320000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">3200000 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP9', 320000)">Investir</button>
+                        </div>
+
+                        <div class="card fade-in" data-vip="VIP3">
+                            <div class="vip-icon">VIP3</div>
+                            <div class="vip-name">Titânio</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">1333 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">8000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">80700 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP3', 8000)">Investir</button>
+                        </div>
+
+                        <div class="card fade-in" data-vip="VIP4">
+                            <div class="vip-icon">VIP4</div>
+                            <div class="vip-name">Diamante</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">2000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">10000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">100000 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP4', 10000)">Investir</button>
+                        </div>
+
+                        <div class="card fade-in" data-vip="VIP5">
+                            <div class="vip-icon">VIP5</div>
+                            <div class="vip-name">Bronze Corporativo</div>
+                            <div class="investment-details">
+                                <div class="detail-item daily-rate">
+                                    <span class="label">Taxa Diária</span>
+                                    <span class="value" data-trend="positive">3333 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Preço</span>
+                                    <span class="value" data-trend="neutral">20000 KZ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Período</span>
+                                    <span class="value" data-trend="neutral">90 dias</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Rendimento</span>
+                                    <span class="value" data-trend="positive">200000 KZ</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary" onclick="investInPlan('VIP5', 20000)">Investir</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav fade-in">
+            <a href="home.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Início</span>
+            </a>
+            <a href="invest.html" class="nav-item active">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <span>Investir</span>
+            </a>
+            <a href="wallet.html" class="nav-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                <span>Carteira</span>
+            </a>
+            <a href="team.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <span>Equipe</span>
+            </a>
+            <a href="user.html" class="nav-item">
+                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>
