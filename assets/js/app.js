@@ -22,14 +22,14 @@ async function init() {
             console.log('Usuário não encontrado no banco de dados');
             // User not found in database
             sessionStorage.removeItem('logged_in_user_phone');
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }
     } else {
         console.log('Usuário não está logado');
         // Redirect to login if not logged in (except for login and signup pages)
         const currentPage = window.location.pathname.split('/').pop() || 'home.html';
         if (!['login.html', 'signup.html'].includes(currentPage)) {
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }
     }
 }
@@ -167,7 +167,7 @@ function setupLogoutButton() {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 sessionStorage.removeItem('logged_in_user_phone');
-                window.location.href = 'login.html';
+                window.location.href = 'index.html';
             });
         }
     });
